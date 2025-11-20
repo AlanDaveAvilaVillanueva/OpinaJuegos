@@ -1,4 +1,12 @@
+# Sistema de Gestión de Inventario
 
+## Como crear el entorno virtual
+
+## Como conectar MySQL
+
+## Como iniciar Proyecto
+
+## Recomendaciones
 .env
 SECRET_KEY:
 NAME: root
