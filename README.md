@@ -4,6 +4,7 @@
 
 ## Como conectar MySQL
 
+
 ### creacion de archivo .env
 Este archivo es indispensable para poder iniciar el servidor MySQL, ya que en ***Inventario > Settings*** se encuentra configurado para que encuentre el archivo **.env** y que recoja los datos ingresado en **.env**
 
@@ -26,12 +27,13 @@ HOST: localhost
 ```bash
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
-8. Debes copiar la SECRET_KEY que te haya dado la terminal
+8. Debes copiar la SECRET_KEY que te haya dado la terminal y pegarlo en el archivo .env en **SECRET_KEY**
 
 
 ## Como iniciar Proyecto
 
 ## Recomendaciones
+
 
 
 
