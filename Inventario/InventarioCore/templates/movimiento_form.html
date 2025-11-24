@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulario Movimiento{% endblock %}
+
+{% block content %}
+<h2>{% if object %}Editar movimiento{% else %}Crear movimiento{% endif %}</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+  <a href="{% url 'movimientoinventario-list' %}">Cancelar</a>
+</form>
+
+{% endblock %}

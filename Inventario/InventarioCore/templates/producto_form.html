@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulario Producto{% endblock %}
+
+{% block content %}
+<h2>{% if object %}Editar producto{% else %}Crear producto{% endif %}</h2>
+
+<form method="post" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-6">
+    {{ form.nombre.label_tag }}
+    {{ form.nombre }}
+  </div>
+  <div class="col-md-6">
+    {{ form.categoria.label_tag }}
+    {{ form.categoria }}
+  </div>
+  <div class="col-md-4">
+    {{ form.cantidad.label_tag }}
+    {{ form.cantidad }}
+  </div>
+  <div class="col-md-4">
+    {{ form.precio_unitario.label_tag }}
+    {{ form.precio_unitario }}
+  </div>
+  <div class="col-12">
+    {{ form.descripcion.label_tag }}
+    {{ form.descripcion }}
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <a class="btn btn-secondary" href="{% url 'producto-list' %}">Cancelar</a>
+  </div>
+</form>
+
+{% endblock %}

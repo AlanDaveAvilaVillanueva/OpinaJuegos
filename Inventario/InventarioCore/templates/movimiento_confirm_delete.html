@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Eliminar Movimiento{% endblock %}
+
+{% block content %}
+<h2>Eliminar movimiento: {{ object.id }}</h2>
+<p>Producto: {{ object.producto.nombre }} — {{ object.tipo }} — {{ object.cantidad }}</p>
+<p>¿Estás seguro que deseas eliminar este movimiento?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Sí, eliminar</button>
+  <a href="{% url 'movimientoinventario-detail' object.pk %}">Cancelar</a>
+</form>
+
+{% endblock %}
